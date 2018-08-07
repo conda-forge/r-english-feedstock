@@ -1,4 +1,4 @@
-{% set version = '1.1-2' %}
+{% set version = "1.1-4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,7 +11,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/english_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/english/english_{{ version }}.tar.gz
-  sha256: fd35100a167ec49073c4c552ab415377ff4fae573d52ec72b389e05c10bd98f2
+  sha256: 1378d1a46ab26df3f6fc0f05dd6537120d2c0c8dacd78eda4761399b2356822e
 
 build:
   number: 0
