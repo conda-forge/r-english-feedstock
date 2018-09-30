@@ -1,4 +1,4 @@
-{% set version = "1.1-4" %}
+{% set version = '1.1-4' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -9,32 +9,33 @@ package:
 source:
   fn: english_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/english_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/english/english_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/english_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/english/english_{{ version }}.tar.gz
   sha256: 1378d1a46ab26df3f6fc0f05dd6537120d2c0c8dacd78eda4761399b2356822e
 
 build:
-  number: 0
+  merge_build_host: True  # [win]
+  number: 1
   skip: true  # [win32]
-
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
+    - {{posix}}zip               # [win]
+  host:
     - r-base
-
   run:
     - r-base
 
 test:
   commands:
-    - $R -e "library('english')"  # [not win]
+    - $R -e "library('english')"           # [not win]
     - "\"%R%\" -e \"library('english')\""  # [win]
 
 about:
-  home: https://cran.r-project.org/package=english
+  home: https://CRAN.R-project.org/package=english
   license: GPL-2
   summary: Allow numbers to be presented in an English language version, one, two, three, ...
   license_family: GPL2
@@ -43,9 +44,10 @@ about:
 
 extra:
   recipe-maintainers:
+    - CurtLH
     - johanneskoester
     - bgruening
     - daler
     - jdblischak
     - cbrueffer
-    - CurtLH
+    - dbast
