@@ -14,9 +14,8 @@ Summary: Allow numbers to be presented in an English language version, one, two,
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-english-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-english-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/r-english-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-english-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-english-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-english-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/r-english-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/r-english-feedstock)
 
 Current release info
 ====================
