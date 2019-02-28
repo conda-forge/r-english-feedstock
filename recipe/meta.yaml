@@ -1,4 +1,4 @@
-{% set version = '1.1-4' %}
+{% set version = '1.2-1' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -7,16 +7,15 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: english_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/english_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/english/english_{{ version }}.tar.gz
-  sha256: 1378d1a46ab26df3f6fc0f05dd6537120d2c0c8dacd78eda4761399b2356822e
+  sha256: 7b299bf875841e5840f1b9a39da016fccce263bcdfa70ccfb57eff10c8a82d12
 
 build:
-  noarch: generic
   merge_build_host: True  # [win]
-  number: 1001
+  number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -43,10 +42,23 @@ about:
 
 extra:
   recipe-maintainers:
+    - conda-forge/r
     - CurtLH
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
+
+# Package: english
+# Type: Package
+# Title: Translate Integers into English
+# Version: 1.2-1
+# Date: 2019-02-20
+# Author: John Fox, Bill Venables, Anthony Damico and Anne Pier Salverda
+# Maintainer: Bill Venables <Bill.Venables@gmail.com>
+# Description: Allow numbers to be presented in an English language version, one, two, three, ...
+# Suggests: utils
+# License: GPL-2
+# LazyLoad: yes
+# NeedsCompilation: no
+# Encoding: UTF-8
+# RoxygenNote: 6.1.1
+# Packaged: 2019-02-20 22:09:06 UTC; ven037
+# Repository: CRAN
+# Date/Publication: 2019-02-26 22:00:06 UTC
