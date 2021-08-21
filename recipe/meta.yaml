@@ -1,4 +1,4 @@
-{% set version = "1.2-5" %}
+{% set version = "1.2-6" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/english_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/english/english_{{ version }}.tar.gz
-  sha256: a14de9100cab2dde11cd3c81e1d208dee501dcc6a5a15ece345e780e888dd934
+  sha256: 49578a39b813d3497a960cb50a78d611fb367c9d1587bb438f4372748baf76bc
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -36,8 +36,7 @@ test:
 about:
   home: https://CRAN.R-project.org/package=english
   license: GPL-2.0-only
-  summary: Allow numbers to be presented in an English language version, one, two, three, ...  Ordinals
-    are also available, first, second, third, ...
+  summary: Allow numbers to be presented in an English language version, one, two, three, ...  Ordinals are also available, first, second, third, ...
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
