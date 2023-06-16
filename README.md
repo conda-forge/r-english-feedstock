@@ -1,11 +1,11 @@
-About r-english
-===============
+About r-english-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-english-feedstock/blob/main/LICENSE.txt)
 
 Home: https://CRAN.R-project.org/package=english
 
 Package license: GPL-2.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-english-feedstock/blob/main/LICENSE.txt)
 
 Summary: Allow numbers to be presented in an English language version, one, two, three, ...  Ordinals are also available, first, second, third, ...
 
